@@ -1,15 +1,37 @@
-﻿@model IEnumerable<DergiProjesi.Models.Journal>
+﻿@model IEnumerable<DergiProjesi.Models.JournalModel>
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Journal Listesi</h2>
 
-@foreach (var item in Model)
-{
-   <p> @item.Name </p>
+<div class="row">
+    <div class ="col-md-8">
 
-}
+        @foreach (var item in Model)
+        {
+        <div class="journal">
+
+            <h3 class="page-header">
+                @item.Name
+            </h3>
+
+            <hr />
+            <img class="img-responsive" src="https://via.placeholder.com/900x300" alt="" />
+            <hr />
+
+            <button class="btn btn-primary">Daha Fazla...</button>
+
+        </div>
+        
+        }
+    </div>
+
+    <div
+        class="col-md-4">
+    </div>
+</div>
+
 
 
 

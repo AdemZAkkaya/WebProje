@@ -14,7 +14,18 @@ namespace DergiProjesi.Controllers
 
         public ActionResult Index()
         {
-            return View(context.Journals.ToList());
+            var journals = context.Journals
+                .Select(i => new JournalModel()
+                {
+                    Id = i.Id,
+                    Name = i.Name,
+                    Anasayfa = i.Anasayfa,
+                    Onay = i.Onay,
+                    ImageURL = i.ImageURL
+                })
+                .Where(i => i.Onay == true && i.Anasayfa == true);
+
+            return View(journals.ToList());
         }
     }
 }
