@@ -1,9 +1,16 @@
-﻿
+﻿@model IEnumerable<DergiProjesi.Models.Journal>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+
+@foreach (var item in Model)
+{
+   <p> @item.Name </p>
+
+}
+
 
 
 

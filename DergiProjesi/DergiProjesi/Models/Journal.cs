@@ -7,12 +7,12 @@ namespace DergiProjesi.Models
 {
     public class Journal
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public string imageURL { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string ImageURL { get; set; }
 
-        public int categoryId { get; set; }
-        public Category category { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }

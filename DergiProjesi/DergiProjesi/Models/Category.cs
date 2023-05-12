@@ -7,9 +7,9 @@ namespace DergiProjesi.Models
 {
     public class Category
     {
-        public int id { get; set; }
-        public string categoryName { get; set; }
+        public int Id { get; set; }
+        public string CategoryName { get; set; }
 
-        public List<Journal> journals { get; set; }
+        public List<Journal> Journals { get; set; }
     }
 }

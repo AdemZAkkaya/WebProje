@@ -8,7 +8,12 @@ namespace DergiProjesi.Models
 {
     public class JournalContext : DbContext
     {
-        public DbSet<Journal> journals { get; set; }
-        public DbSet<Category> categories { get; set; }
+        public JournalContext() : base("journalDb")
+        {
+            Database.SetInitializer(new JournalInitializer());
+        }
+
+        public DbSet<Journal> Journals { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

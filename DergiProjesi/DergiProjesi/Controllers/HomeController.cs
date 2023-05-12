@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DergiProjesi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,12 @@ namespace DergiProjesi.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+
+        private JournalContext context = new JournalContext();
+
         public ActionResult Index()
         {
-            return View();
+            return View(context.Journals.ToList());
         }
     }
 }
