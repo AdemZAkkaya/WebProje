@@ -14,6 +14,11 @@ namespace DergiProjesi.Controllers
     {
         private JournalContext db = new JournalContext();
 
+        public PartialViewResult CategoryList()
+        {
+            return PartialView(db.Categories.ToList());
+        }
+
         // GET: Category
         public ActionResult Index()
         {
