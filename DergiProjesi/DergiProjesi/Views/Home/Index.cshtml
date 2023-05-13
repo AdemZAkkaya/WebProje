@@ -19,8 +19,8 @@
             <hr />
             <img class="img-responsive" src="https://via.placeholder.com/900x300" alt="" />
             <hr />
-
-            <button class="btn btn-primary">Daha Fazla...</button>
+            @Html.ActionLink("Dergi Detayı", "Details", "Journal", new { id = @item.Id }, new { @class = "btn btn-primary" })
+            
 
         </div>
         
