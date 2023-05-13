@@ -48,7 +48,7 @@ namespace DergiProjesi.Controllers
         // daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Description,ImageURL,CategoryId")] Journal journal)
+        public ActionResult Create([Bind(Include = "Name,Description,ImageURL,CategoryId")] Journal journal)
         {
             if (ModelState.IsValid)
             {

@@ -2,9 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\DergiProjesi",
+    "\\DergiProjesi\\Content",
     "\\DergiProjesi\\Controllers",
-    "\\DergiProjesi\\Models"
+    "\\DergiProjesi\\Models",
+    "\\DergiProjesi\\Views",
+    "\\DergiProjesi\\Views\\Journal"
   ],
-  "SelectedNode": "\\DergiProjesi\\Models",
+  "SelectedNode": "\\DergiProjesi.sln",
   "PreviewInSolutionExplorer": false
 }
