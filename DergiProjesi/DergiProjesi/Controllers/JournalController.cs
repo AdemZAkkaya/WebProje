@@ -86,9 +86,20 @@ namespace DergiProjesi.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(journal).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                //db.Entry(journal).State = EntityState.Modified;
+                var entity = db.Journals.Find(journal.Id);
+                if (entity != null)
+                {
+                    entity.Name = journal.Name;
+                    entity.Description = journal.Description;
+                    entity.ImageURL = journal.ImageURL;
+                    entity.CategoryId = journal.CategoryId;
+                    db.SaveChanges();
+
+                    TempData["Journal"] = entity;
+
+                    return RedirectToAction("Index");
+                }
             }
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "CategoryName", journal.CategoryId);
             return View(journal);

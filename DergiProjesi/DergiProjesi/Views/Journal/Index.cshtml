@@ -11,6 +11,16 @@
     @Html.ActionLink("Yeni Dergi Ekle", "Create", null, new { @class = "btn btn-primary" })
 </p>
 <hr />
+
+@if (TempData["Journal"] !=null)
+{
+   var journal = (DergiProjesi.Models.Journal)TempData["Journal"];
+   <div class="alert alert-success">
+       <strong><span class="glyphicon glyphicon-ok"></span> @journal.Name</strong> isimli dergi başarıyla editlendi.
+   </div>
+
+}
+
 <table class="table table-bordered table-hover table-striped">
     <tr>
         <th>
