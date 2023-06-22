@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using DergiProjesi.Models;
 
+<-- VMOcQsSwVEFLIELEsExHRU0gWWF6xLFsxLFtIFRla25vbG9qaWxlcmkgQXJhxZ90xLFybWEgRW5zdGl0w7xzw7wgKFlURSk= -->
+
 namespace DergiProjesi.Controllers
 {
     public class JournalController : Controller
